@@ -1,0 +1,9 @@
+[book]
+title = "cloudexit - docs"
+description = "Documentation for cloudexit (EscapeCloud Community Edition)"
+authors = ["Bence Hezso"]
+language = "en"
+
+[output.html]
+theme = "theme"
+additional-css = ["theme/custom.css"]

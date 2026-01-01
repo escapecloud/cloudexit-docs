@@ -1,0 +1,28 @@
+{{! Custom head for exitcloud.io docs }}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+
+{{! Default mdBook inserts }}
+{{#if title}}
+<title>{{title}}</title>
+{{/if}}
+
+{{#if description}}
+<meta name="description" content="{{description}}">
+{{/if}}
+
+{{! mdBook default styles/scripts }}
+<link rel="stylesheet" href="{{ path_to_root }}css/variables.css">
+<link rel="stylesheet" href="{{ path_to_root }}css/general.css">
+<link rel="stylesheet" href="{{ path_to_root }}css/chrome.css">
+<link rel="stylesheet" href="{{ path_to_root }}css/print.css" media="print">
+
+{{#each additional_css}}
+<link rel="stylesheet" href="{{ ../path_to_root }}{{this}}">
+{{/each}}
+
+<script src="{{ path_to_root }}js/vendor/jquery.js"></script>
+<script src="{{ path_to_root }}js/vendor/clipboard.min.js"></script>
+<script src="{{ path_to_root }}js/vendor/highlight.js"></script>
+<script src="{{ path_to_root }}js/book.js"></script>
