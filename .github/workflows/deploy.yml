@@ -36,6 +36,31 @@ jobs:
       - name: Build
         run: mdbook build
 
+      - name: Generate sitemap.xml
+        shell: bash
+        run: |
+          set -euo pipefail
+          BOOK_DIR="book"
+          BASE_URL="${{ steps.pages.outputs.base_url }}"
+          BASE_URL="${BASE_URL%/}"
+          OUT="$BOOK_DIR/sitemap.xml"
+
+          {
+            echo '<?xml version="1.0" encoding="UTF-8"?>'
+            echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+          } > "$OUT"
+
+          find "$BOOK_DIR" -name "*.html" \
+            | sed "s|^$BOOK_DIR||" \
+            | sed 's|/index.html$|/|' \
+            | sed 's|\.html$||' \
+            | sort -u \
+            | while read -r path; do
+                printf '  <url><loc>%s</loc></url>\n' "$BASE_URL$path" >> "$OUT"
+              done
+
+          echo '</urlset>' >> "$OUT"
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
