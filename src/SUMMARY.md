@@ -37,6 +37,12 @@
 - [What gets uploaded](connected-mode/what-gets-uploaded.md)
 - [Offline vs online reports](connected-mode/offline-vs-online-reports.md)
 
+# Non-Interactive Mode
+- [Overview](non-interactive/overview.md)
+- [AWS](non-interactive/aws.md)
+- [Azure](non-interactive/azure.md)
+- [GitHub Actions](non-interactive/github-actions.md)
+
 # Troubleshooting
 - [Common errors](troubleshooting/common-errors.md)
 - [Auth & permissions](troubleshooting/auth-and-permissions.md)
