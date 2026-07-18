@@ -43,6 +43,11 @@
 - [Azure](non-interactive/azure.md)
 - [GitHub Actions](non-interactive/github-actions.md)
 
+# Data Landscape & Egress Estimation
+- [Overview](egress/overview.md)
+- [Data Landscape](egress/data-landscape.md)
+- [Estimated Egress Fee](egress/estimated-egress-fee.md)
+
 # Troubleshooting
 - [Common errors](troubleshooting/common-errors.md)
 - [Auth & permissions](troubleshooting/auth-and-permissions.md)

@@ -37,6 +37,13 @@ reports/<timestamp>/index.html
 reports/<timestamp>/report.pdf
 ```
 
+With `--egress`, also open:
+
+```text
+reports/<timestamp>/egress.html
+reports/<timestamp>/egress.pdf
+```
+
 ## Formats
 
 **Basic (offline)**
