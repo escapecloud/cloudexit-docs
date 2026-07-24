@@ -11,6 +11,8 @@ python3 main.py azure --cli --egress
 python3 main.py aws --profile PROFILE --egress
 ```
 
+> The `--egress` flag is also available in the [GitHub Action](https://github.com/marketplace/actions/github-action-for-cloudexit) — set the `egress` input to `true` to enable it.
+
 **How it works**
 
 When enabled, cloudexit runs **Stage #7 - Egress Estimation** after the main report has already been generated.
